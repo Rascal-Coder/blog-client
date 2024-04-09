@@ -1,0 +1,40 @@
+{
+  "name": "blog-client",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint src/**/*.{js,jsx,ts,tsx,json}",
+    "lint:fix": "eslint --fix 'src/**/*.{js,jsx,ts,tsx,json}'",
+    "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@iconify/react": "^4.1.1",
+    "@iconify/utils": "^2.1.22",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@iconify/json": "^2.2.198",
+    "@rascal/color-palette": "workspace:*",
+    "@rascal/rules-config": "workspace:*",
+    "@rascal/uno-preset": "workspace:*",
+    "@types/node": "^20.12.6",
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@unocss/core": "^0.59.0",
+    "@unocss/eslint-config": "0.59.0",
+    "@unocss/preset-attributify": "^0.59.0",
+    "@unocss/preset-icons": "0.59.0",
+    "@unocss/preset-uno": "0.59.0",
+    "@unocss/transformer-directives": "0.59.0",
+    "@unocss/transformer-variant-group": "0.59.0",
+    "@unocss/vite": "0.59.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "typescript": "^5.4.4",
+    "vite": "^5.2.0"
+  }
+}
