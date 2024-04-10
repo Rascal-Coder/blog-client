@@ -12,19 +12,26 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
     "@iconify/react": "^4.1.1",
     "@iconify/utils": "^2.1.22",
+    "@reduxjs/toolkit": "^2.2.3",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-redux": "^9.1.0",
+    "redux-logger": "^3.0.6",
+    "redux-persist": "^6.0.0"
   },
   "devDependencies": {
     "@iconify/json": "^2.2.198",
-    "@rascal/color-palette": "workspace:*",
     "@rascal/rules-config": "workspace:*",
     "@rascal/uno-preset": "workspace:*",
+    "@rascal/utils": "workspace:*",
     "@types/node": "^20.12.6",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
+    "@types/redux": "^3.6.0",
+    "@types/redux-logger": "^3.0.13",
     "@unocss/core": "^0.59.0",
     "@unocss/eslint-config": "0.59.0",
     "@unocss/preset-attributify": "^0.59.0",
@@ -34,6 +41,9 @@
     "@unocss/transformer-variant-group": "0.59.0",
     "@unocss/vite": "0.59.0",
     "@vitejs/plugin-react": "^4.2.1",
+    "classnames": "^2.5.1",
+    "immer": "^10.0.4",
+    "react-router-dom": "^6.22.3",
     "typescript": "^5.4.4",
     "vite": "^5.2.0"
   }

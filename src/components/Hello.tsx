@@ -2,7 +2,7 @@ import { type FC } from 'react'
 
 export const ReactDemo: FC = () => (
   <>
-    <div className={' card-wrapper border-1-black'} text-amber='1'>
+    <div className={' card-wrapper b-(1 solid black)'} text-amber='3'>
       Hello React
     </div>
   </>

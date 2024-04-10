@@ -4,7 +4,6 @@ import transformerVariantGroup from '@unocss/transformer-variant-group'
 import presetUno from '@unocss/preset-uno'
 import type { Theme } from '@unocss/preset-uno'
 import { presetRascal } from '@rascal/uno-preset'
-import { themeVars } from './src/theme/vars'
 import presetAttributify from '@unocss/preset-attributify'
 export default defineConfig<Theme>({
   content: {
@@ -13,7 +12,6 @@ export default defineConfig<Theme>({
     }
   },
   theme: {
-    ...themeVars,
     fontSize: {
       'icon-xs': '0.875rem',
       'icon-small': '1rem',
@@ -22,9 +20,7 @@ export default defineConfig<Theme>({
       'icon-xl': '2rem'
     }
   },
-  shortcuts: {
-    'border-1-black': 'border border-solid border-black'
-  },
+  shortcuts: {},
   transformers: [transformerDirectives(), transformerVariantGroup()],
   presets: [presetUno({ dark: 'class' }), presetRascal(), presetAttributify()]
 })
