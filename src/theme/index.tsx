@@ -79,9 +79,7 @@ export const Theme = () => {
               --color-keyboard-bg: hsl(var(--keyboard-hue), var(--keyboard-sat), 20%);
               --color-keyboard-text: hsl(var(--keyboard-hue), var(--keyboard-sat), 90%);
               `}
-
-          // blog
-            blockquote {
+          blockquote {
             border-left-color: var(--color-inverse-bg);
           }
         }

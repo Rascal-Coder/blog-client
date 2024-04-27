@@ -157,6 +157,7 @@ module.exports = {
 			'error',
 			{
 				allowDestructuring: true,
+				allowedNames: ["self", "_this"]
 			},
 		],
 		'@typescript-eslint/no-throw-literal': [
@@ -201,14 +202,14 @@ module.exports = {
 		'@typescript-eslint/prefer-includes': 'error',
 		'@typescript-eslint/prefer-literal-enum-member': 'error',
 		'@typescript-eslint/prefer-namespace-keyword': 'error',
-		'@typescript-eslint/prefer-nullish-coalescing': [
-			'error',
-			{
-				ignoreTernaryTests: false,
-				ignoreConditionalTests: false,
-				ignoreMixedLogicalExpressions: false,
-			},
-		],
+		// '@typescript-eslint/prefer-nullish-coalescing': [
+		// 	'error',
+		// 	{
+		// 		ignoreTernaryTests: false,
+		// 		ignoreConditionalTests: false,
+		// 		ignoreMixedLogicalExpressions: false,
+		// 	},
+		// ],
 		'@typescript-eslint/prefer-optional-chain': 'error',
 		'@typescript-eslint/prefer-readonly': 'error',
 		'@typescript-eslint/prefer-reduce-type-parameter': 'error',

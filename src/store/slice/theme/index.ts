@@ -18,14 +18,15 @@ export const themeSlice = createSlice({
     onThemeModeChange(state, action: PayloadAction<PayloadType['mode']>) {
       state.mode = action.payload
       return state
-    },
-    onThemeFontFamilyChange(state, action: PayloadAction<PayloadType['fontFamily']>) {
-      state.fontFamily = action.payload
-      return state
     }
+    // onThemeFontFamilyChange(state, action: PayloadAction<PayloadType['fontFamily']>) {
+    //   state.fontFamily = action.payload
+    //   return state
+    // }
   }
 })
 
-export const { onThemeModeChange, onThemeFontFamilyChange } = themeSlice.actions
+// export const { onThemeModeChange, onThemeFontFamilyChange } = themeSlice.actions
+export const { onThemeModeChange } = themeSlice.actions
 
 export default themeSlice.reducer

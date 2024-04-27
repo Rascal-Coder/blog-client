@@ -3,7 +3,6 @@ import path from 'node:path'
 import unocss from '@unocss/vite'
 import presetIcons from '@unocss/preset-icons'
 import { FileSystemIconLoader as fileSystemIconLoader } from '@iconify/utils/lib/loader/node-loaders'
-
 export function setupUnocss(viteEnv: ImportMetaEnv) {
   const { VITE_ICON_PREFIX, VITE_ICON_LOCAL_PREFIX } = viteEnv
 
@@ -21,9 +20,9 @@ export function setupUnocss(viteEnv: ImportMetaEnv) {
           display: 'inline-block'
         },
         collections: {
-          [collectionName]: fileSystemIconLoader(localIconPath, svg =>
-            svg.replace(/^<svg\s/, '<svg width="1em" height="1em" ')
-          )
+          [collectionName]: fileSystemIconLoader(localIconPath, svg => {
+            return svg.replace(/^<svg\s/, '<svg width="1em" height="1em" ')
+          })
         },
         warn: true
       })

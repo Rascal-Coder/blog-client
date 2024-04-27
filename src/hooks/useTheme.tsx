@@ -1,4 +1,5 @@
-import { onThemeFontFamilyChange, onThemeModeChange } from '@/store/slice/theme'
+// import { onThemeFontFamilyChange, onThemeModeChange } from '@/store/slice/theme'
+import { onThemeModeChange } from '@/store/slice/theme'
 import { useCallback } from 'react'
 import { useRootDispatch, useRootSelector } from './useStore'
 
@@ -14,12 +15,12 @@ export const useTheme = () => {
     [dispatch, mode]
   )
 
-  const toggleThemeFontFamily = useCallback(
-    (_font: string) => {
-      dispatch(onThemeFontFamilyChange(_font))
-    },
-    [dispatch]
-  )
+  // const toggleThemeFontFamily = useCallback(
+  //   (_font: string) => {
+  //     dispatch(onThemeFontFamilyChange(_font))
+  //   },
+  //   [dispatch]
+  // )
 
   return {
     // mode
@@ -30,7 +31,7 @@ export const useTheme = () => {
     toggleThemeMode,
 
     // font
-    fontFamily,
-    toggleThemeFontFamily
+    fontFamily
+    // toggleThemeFontFamily
   }
 }

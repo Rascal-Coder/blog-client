@@ -1,11 +1,11 @@
 // import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App'
+import App from './app'
 import { Provider } from 'react-redux'
 import { setupIconifyOffline } from './plugins'
 import { PersistGate } from 'redux-persist/integration/react'
 import { persistor, store } from './store'
-import 'virtual:uno.css'
+import './plugins/assets'
 
 function setupVitePlugins() {
   setupIconifyOffline()

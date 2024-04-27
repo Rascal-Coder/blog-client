@@ -6,13 +6,13 @@
 import { useTheme } from '@/hooks/useTheme'
 import { ThemeWrapper } from '@/theme'
 import { themeSwitchStyle } from './style'
+import SvgIcon from '@/components/svg-icon'
 
 export type ThemeSwitchProps = {
   className?: string
 }
 const ThemeSwitch: React.FC<ThemeSwitchProps> = ({ className = '' }) => {
   const { toggleThemeMode } = useTheme()
-
   return (
     <ThemeWrapper style={themeSwitchStyle}>
       <div className={`theme-switch ${className}`}>
@@ -23,9 +23,17 @@ const ThemeSwitch: React.FC<ThemeSwitchProps> = ({ className = '' }) => {
             toggleThemeMode()
           }}
         >
-          <i className='bx bxs-sun'></i>
+          <SvgIcon
+            style={{ width: '4vw', height: '4vw' }}
+            icon='line-md:moon-alt-to-sunny-outline-loop-transition'
+            className='theme-icon sun'
+          ></SvgIcon>
           <span className='btn-switch'></span>
-          <i className='bx bxs-moon'></i>
+          <SvgIcon
+            style={{ width: '4vw', height: '4vw' }}
+            icon='line-md:sunny-filled-loop-to-moon-filled-loop-transition'
+            className='theme-icon moon'
+          ></SvgIcon>
         </button>
       </div>
     </ThemeWrapper>

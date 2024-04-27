@@ -41,10 +41,15 @@
     "@unocss/transformer-variant-group": "0.59.0",
     "@unocss/vite": "0.59.0",
     "@vitejs/plugin-react": "^4.2.1",
+    "ahooks": "^3.7.11",
+    "cash-dom": "^8.1.5",
     "classnames": "^2.5.1",
     "immer": "^10.0.4",
     "react-router-dom": "^6.22.3",
+    "sass": "^1.75.0",
     "typescript": "^5.4.4",
-    "vite": "^5.2.0"
+    "unplugin-icons": "0.18.5",
+    "vite": "^5.2.0",
+    "vite-plugin-svg-icons": "2.0.1"
   }
 }
