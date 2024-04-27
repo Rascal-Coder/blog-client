@@ -7,6 +7,14 @@ export const themeSwitchStyle = css`
       left: 9%;
       animation: animationClickOn 0.7s;
     }
+
+    .bxs-moon {
+      animation: rotateOn 0.7s;
+    }
+
+    .bxs-sun {
+      animation: shakeOn 0.7s;
+    }
   }
 
   &.dark {
@@ -15,11 +23,20 @@ export const themeSwitchStyle = css`
       right: 9%;
       animation: animationClickOff 0.7s;
     }
+
+    .bxs-moon {
+      animation: rotateOff 0.7s;
+    }
+
+    .bxs-sun {
+      animation: shakeOff 0.7s;
+    }
   }
 
   .theme-switch {
     #switch {
       background-color: var(--color-secondary-bg);
+      animation: clickOff 0.5s;
     }
     display: flex;
     flex-direction: column;
@@ -44,15 +61,18 @@ export const themeSwitchStyle = css`
         z-index: 0;
         top: 13%;
       }
-      .theme-icon {
+
+      i {
+        font-size: 4vw;
         position: absolute;
         z-index: 1;
         top: 26%;
 
-        &.sun {
+        &.bxs-sun {
           left: 15%;
         }
-        &.moon {
+
+        &.bxs-moon {
           right: 15%;
         }
       }
@@ -67,6 +87,19 @@ export const themeSwitchStyle = css`
           width: 3.8rem;
           height: 3.8rem;
           border-radius: 3rem;
+        }
+
+        i {
+          font-size: 2.3rem;
+          top: 28%;
+
+          &.bxs-sun {
+            left: 16%;
+          }
+
+          &.bxs-moon {
+            right: 16%;
+          }
         }
       }
       //responsive
@@ -89,9 +122,123 @@ export const themeSwitchStyle = css`
           height: 6rem;
           border-radius: 3vw;
         }
+
+        i {
+          font-size: 4rem;
+          top: 25%;
+
+          &.bxs-sun {
+            left: 15.5%;
+          }
+
+          &.bxs-moon {
+            right: 15.5%;
+          }
+        }
       }
     }
   }
+  // animations
+  @keyframes clickOff {
+    0% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(0.9);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes clickOn {
+    0% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(0.9);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes shakeOff {
+    0% {
+      transform: scale3d(1, 1, 1);
+    }
+
+    30% {
+      transform: scale3d(0.75, 1.25, 1);
+    }
+
+    40% {
+      transform: scale3d(1.25, 0.75, 1);
+    }
+
+    50% {
+      transform: scale3d(0.85, 1.15, 1);
+    }
+
+    65% {
+      transform: scale3d(1.05, 0.95, 1);
+    }
+
+    75% {
+      transform: scale3d(0.95, 1.05, 1);
+    }
+
+    100% {
+      transform: scale3d(1, 1, 1);
+    }
+  }
+
+  @keyframes shakeOn {
+    0% {
+      transform: scale3d(1, 1, 1);
+    }
+
+    30% {
+      transform: scale3d(1.25, 0.75, 1);
+    }
+
+    40% {
+      transform: scale3d(0.75, 1.25, 1);
+    }
+
+    50% {
+      transform: scale3d(1.15, 0.85, 1);
+    }
+
+    65% {
+      transform: scale3d(0.95, 1.05, 1);
+    }
+
+    75% {
+      transform: scale3d(1.05, 0.95, 1);
+    }
+
+    100% {
+      transform: scale3d(1, 1, 1);
+    }
+  }
+
+  @keyframes rotateOff {
+    50% {
+      transform: rotate(180deg);
+    }
+  }
+
+  @keyframes rotateOn {
+    50% {
+      transform: rotate(-180deg);
+    }
+  }
+
   @keyframes animationClickOff {
     0% {
       right: auto;
