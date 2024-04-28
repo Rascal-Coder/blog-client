@@ -17,4 +17,6 @@ module.exports = {
   bracketSpacing: true,
   // 尾随逗号
   trailingComma: 'none',
+  // 换行符
+  endOfLine: 'auto'
 }

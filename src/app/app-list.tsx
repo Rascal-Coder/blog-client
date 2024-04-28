@@ -1,4 +1,3 @@
-import SvgIcon from '@/components/svg-icon'
 import ThemeSwitch from '@/components/theme-switch'
 
 const Blog = () => {
@@ -9,7 +8,7 @@ const Blog = () => {
   )
 }
 
-const ReplWrapper = () => {
+const PlayGround = () => {
   return (
     <div className='h-[95vh] w-[65vw] p-6 bg-white'>
       {/* <iframe src='https://rick-chou.github.io/repl/' className='h-[95vh] w-[65vw]' /> */}
@@ -17,4 +16,13 @@ const ReplWrapper = () => {
   )
 }
 
-export const appList = [Blog, ReplWrapper]
+export const appList = [
+  {
+    key: 'Blog',
+    component: Blog
+  },
+  {
+    key: 'PlayGround',
+    component: PlayGround
+  }
+]

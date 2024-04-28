@@ -1,6 +1,4 @@
-// import { Bg } from '@/assets/pic';
 import { css } from '@emotion/react'
-// background-image: url(${Bg});
 export const globalStyle = css`
   ::-webkit-scrollbar {
     width: 2px;

@@ -9,7 +9,7 @@ export const useTheme = () => {
 
   const toggleThemeMode = useCallback(
     (_theme?: UnionKey.ThemeScheme) => {
-      const newMode = _theme ?? (mode === 'dark' ? 'light' : 'dark')
+      const newMode = _theme || (mode === 'dark' ? 'light' : 'dark')
       dispatch(onThemeModeChange(newMode))
     },
     [dispatch, mode]

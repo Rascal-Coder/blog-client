@@ -4,6 +4,7 @@ import { FLUSH, PAUSE, PERSIST, PURGE, REGISTER, REHYDRATE, persistReducer, pers
 import storage from 'redux-persist/lib/storage'
 import { name, version } from '../../package.json'
 import themeSlice from './slice/theme'
+import projectSlice from './slice/project'
 
 export const persistKey = `${name}-${version}`
 
@@ -17,7 +18,8 @@ const persistConfig = {
 const persistedReducer = persistReducer(
   persistConfig,
   combineReducers({
-    theme: themeSlice
+    theme: themeSlice,
+    project: projectSlice
   })
 )
 
