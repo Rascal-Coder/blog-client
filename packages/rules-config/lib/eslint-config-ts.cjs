@@ -109,7 +109,6 @@ module.exports = {
     '@typescript-eslint/no-dupe-class-members': 'error',
     '@typescript-eslint/no-duplicate-enum-values': 'error',
     '@typescript-eslint/no-dynamic-delete': 'off',
-    '@typescript-eslint/no-empty-function': 'error',
     '@typescript-eslint/no-empty-interface': [
       'error',
       {
@@ -125,13 +124,6 @@ module.exports = {
         allowEmpty: false,
         allowStaticOnly: false,
         allowWithDecorator: true,
-      },
-    ],
-    '@typescript-eslint/no-floating-promises': [
-      'error',
-      {
-        ignoreVoid: true,
-        ignoreIIFE: true,
       },
     ],
     '@typescript-eslint/no-for-in-array': 'error',

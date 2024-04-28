@@ -8,9 +8,9 @@ const Blog = () => {
   )
 }
 
-const PlayGround = () => {
+const Editor = () => {
   return (
-    <div className='h-[95vh] w-[65vw] p-6 bg-white'>
+    <div className='h-[90vh] w-[65vw] p-6 bg-white box-border'>
       {/* <iframe src='https://rick-chou.github.io/repl/' className='h-[95vh] w-[65vw]' /> */}
     </div>
   )
@@ -22,7 +22,7 @@ export const appList = [
     component: Blog
   },
   {
-    key: 'PlayGround',
-    component: PlayGround
+    key: 'Editor',
+    component: Editor
   }
 ]

@@ -27,7 +27,13 @@ const SvgIcon: React.FC<SvgIconProps | SvgLocalIconProps> = ({ localIcon, ...pro
   const render = () => {
     if (renderLocalIcon) {
       return (
-        <svg {...props} aria-hidden='true' width='1em' height='1em' className={props.className}>
+        <svg
+          {...props}
+          aria-hidden='true'
+          width={props.width ? props.width : '1em'}
+          height={props.height ? props.height : '1em'}
+          className={props.className}
+        >
           <use xlinkHref={symbolId} fill='currentColor'></use>
         </svg>
       )
