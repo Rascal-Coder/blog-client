@@ -8,7 +8,7 @@ import { persistor, store } from './store'
 import { RouterProvider } from 'react-router-dom'
 import { router } from './router'
 import './plugins/assets'
-
+import '@radix-ui/themes/styles.css'
 function setupVitePlugins() {
   setupIconifyOffline()
 }
