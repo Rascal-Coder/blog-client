@@ -32,7 +32,7 @@ export const themeConfig: Record<UnionKey.ThemeScheme, ThemeType> = {
   dark
 }
 export const contentHeight = '65vh'
-
+export const containerOpacity = import.meta.env.VITE_OPACITY
 export const Theme = () => {
   const { mode, dark, fontFamily } = useTheme()
   useEffect(() => {

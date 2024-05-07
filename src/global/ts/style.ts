@@ -13,7 +13,6 @@ export const globalStyle = css`
   body {
     font-family: var(--body-font);
     color: var(--color-primary-text);
-
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

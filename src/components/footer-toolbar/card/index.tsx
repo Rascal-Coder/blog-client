@@ -1,4 +1,4 @@
-import SvgIcon from '@/components/svg-icon'
+import SvgIcon from '~/svg-icon'
 import styles from './styles.module.scss'
 
 interface CardProps {
