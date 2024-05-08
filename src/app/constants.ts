@@ -1,6 +1,6 @@
 export const GRADIENTS = [
   {
-    icon: 'flat-color-icons:folder',
+    icon: 'logos:blogger',
     name: 'Blog',
     value: 'Blog'
   },

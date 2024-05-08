@@ -1,5 +1,6 @@
 import { type IconProps, Icon } from '@iconify/react'
 import { type CSSProperties, useMemo, type SVGProps } from 'react'
+// import { forwardRef } from 'react'
 interface CommonProps {
   localIcon?: string
   className?: string
@@ -9,7 +10,6 @@ interface CommonProps {
 type SvgIconProps = IconProps & CommonProps
 
 type SvgLocalIconProps = SVGProps<SVGSVGElement> & CommonProps
-
 const SvgIcon: React.FC<SvgIconProps | SvgLocalIconProps> = ({ localIcon, ...props }) => {
   const symbolId = useMemo(() => {
     const { VITE_ICON_LOCAL_PREFIX: prefix } = import.meta.env
@@ -20,10 +20,12 @@ const SvgIcon: React.FC<SvgIconProps | SvgLocalIconProps> = ({ localIcon, ...pro
 
     return `#${prefix}-${icon}`
   }, [localIcon])
+
   /** If localIcon is passed, render localIcon first */
   const renderLocalIcon = useMemo(() => {
     return localIcon || !('icon' in props)
   }, [localIcon, props])
+
   const render = () => {
     if (renderLocalIcon) {
       return (
@@ -40,7 +42,7 @@ const SvgIcon: React.FC<SvgIconProps | SvgLocalIconProps> = ({ localIcon, ...pro
     }
 
     if ('icon' in props) {
-      return <Icon {...props} />
+      return <Icon {...props} /> // Ensure ref is passed to the Icon component
     }
   }
 

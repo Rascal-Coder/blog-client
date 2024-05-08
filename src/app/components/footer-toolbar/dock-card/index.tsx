@@ -13,7 +13,7 @@ interface DockCardProps {
   gradIent: GradIent
 }
 
-const INITIAL_WIDTH = 48
+const INITIAL_WIDTH = 30
 
 export const DockCard = ({ children, gradIent }: DockCardProps) => {
   const { toggleProject, currentProject } = useProjectSwitch()
@@ -89,7 +89,8 @@ export const DockCard = ({ children, gradIent }: DockCardProps) => {
       >
         {children}
       </animated.button>
-      <animated.div className={currentProject === gradIent.value ? `w-[6px] h-[6px] rounded-[50%] bg-coolGray` : ''} />
+      {/* dot */}
+      <div className={currentProject === gradIent.value ? `w-[4px] h-[4px] rounded-[50%] bg-coolGray` : ''} />
     </div>
   )
 }
