@@ -1,0 +1,8 @@
+.dock {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  box-sizing: content-box;
+  transform-origin: center bottom;
+  transition: bottom 0.3s ease;
+}

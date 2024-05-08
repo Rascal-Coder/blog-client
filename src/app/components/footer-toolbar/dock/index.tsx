@@ -48,15 +48,15 @@ export const Dock = ({ children }: DockProps) => {
         onMouseOut={() => {
           setHovered(false)
         }}
-        style={{
-          x: '-50%',
-          scale: zoomLevel
-            .to({
-              range: [DOCK_ZOOM_LIMIT[0], 1, DOCK_ZOOM_LIMIT[1]],
-              output: [2, 1, 0.5]
-            })
-            .to(value => clamp(0.5, 2, value))
-        }}
+        // style={{
+        //   x: '-50%',
+        //   scale: zoomLevel
+        //     .to({
+        //       range: [DOCK_ZOOM_LIMIT[0], 1, DOCK_ZOOM_LIMIT[1]],
+        //       output: [2, 1, 0.5]
+        //     })
+        //     .to(value => clamp(0.5, 2, value))
+        // }}
       >
         {children}
       </animated.div>

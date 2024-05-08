@@ -3,7 +3,8 @@ import Content from './modules/content'
 import SideBar from './modules/sidebar'
 const Blog = () => {
   return (
-    <div className='w-[65vw] h-[90vh]'>
+    // className='w-[65vw] h-[90vh]'
+    <div>
       <Header></Header>
       <Content></Content>
       <SideBar></SideBar>

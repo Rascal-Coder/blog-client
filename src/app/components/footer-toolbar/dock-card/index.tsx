@@ -89,7 +89,7 @@ export const DockCard = ({ children, gradIent }: DockCardProps) => {
       >
         {children}
       </animated.button>
-      <animated.div className={currentProject === gradIent.value ? styles['dock-dot'] : ''} />
+      <animated.div className={currentProject === gradIent.value ? `w-[6px] h-[6px] rounded-[50%] bg-coolGray` : ''} />
     </div>
   )
 }
