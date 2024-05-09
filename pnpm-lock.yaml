@@ -23,9 +23,6 @@ importers:
       '@radix-ui/themes':
         specifier: ^3.0.3
         version: 3.0.3(@types/react-dom@18.2.24)(@types/react@18.2.75)(react-dom@18.2.0)(react@18.2.0)
-      '@react-spring/shared':
-        specifier: ^9.7.3
-        version: 9.7.3(react@18.2.0)
       '@react-spring/web':
         specifier: ^9.7.3
         version: 9.7.3(react-dom@18.2.0)(react@18.2.0)
@@ -47,9 +44,6 @@ importers:
       react-redux:
         specifier: ^9.1.0
         version: 9.1.0(@types/react@18.2.75)(react@18.2.0)(redux@5.0.1)
-      react-spinners:
-        specifier: ^0.13.8
-        version: 0.13.8(react-dom@18.2.0)(react@18.2.0)
       react-transition-group:
         specifier: ^4.4.5
         version: 4.4.5(react-dom@18.2.0)(react@18.2.0)
@@ -117,9 +111,6 @@ importers:
       ahooks:
         specifier: ^3.7.11
         version: 3.7.11(react@18.2.0)
-      cash-dom:
-        specifier: ^8.1.5
-        version: 8.1.5
       classnames:
         specifier: ^2.5.1
         version: 2.5.1
@@ -3172,10 +3163,6 @@ packages:
     resolution: {integrity: sha512-WcvhVRjXLKFB/kmOFVwELtMxyhq3iM/MvmXcyCe2PNf166c39mptscOc/45TTS96n2gpNV2z7+NakArTWZCQ3w==}
     dev: true
 
-  /cash-dom@8.1.5:
-    resolution: {integrity: sha512-/BS05CfzyHR5xT2ksKj1sDLPaOv5rSmIwoGxNgdKwUtnIuiJ5neMxVEmZxvfyJiSjGbOMD0Lwe+9v+fszDqHew==}
-    dev: true
-
   /chalk@1.1.3:
     resolution: {integrity: sha512-U3lRVLMSlsCfjqYPbLyVv11M9CPW4I728d6TCKMAOJueEeB9/8o+eSsMnxPJD+Q+K909sdESg7C+tIkoH6on1A==}
     engines: {node: '>=0.10.0'}
@@ -5407,16 +5394,6 @@ packages:
       '@remix-run/router': 1.15.3
       react: 18.2.0
     dev: true
-
-  /react-spinners@0.13.8(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-3e+k56lUkPj0vb5NDXPVFAOkPC//XyhKPJjvcGjyMNPWsBKpplfeyialP74G7H7+It7KzhtET+MvGqbKgAqpZA==}
-    peerDependencies:
-      react: ^16.0.0 || ^17.0.0 || ^18.0.0
-      react-dom: ^16.0.0 || ^17.0.0 || ^18.0.0
-    dependencies:
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-    dev: false
 
   /react-style-singleton@2.2.1(@types/react@18.2.75)(react@18.2.0):
     resolution: {integrity: sha512-ZWj0fHEMyWkHzKYUr2Bs/4zU6XLmq9HsgBURm7g5pAVfyn49DgUiNgY2d4lXRlYSiCif9YBGpQleewkcqddc7g==}
