@@ -1,12 +1,10 @@
-import { appList } from './app-list'
-import FooterToolbar from './components/footer-toolbar'
-import { GRADIENTS } from './constants'
-import AppRender from './components/AppRender'
+import { FooterToolbar, AppRender } from './components'
+import { GRADIENTS, APPLIST } from './constants'
 
 export default function App() {
   return (
     <>
-      <AppRender apps={appList} />
+      <AppRender apps={APPLIST} />
       <FooterToolbar gradIents={GRADIENTS}></FooterToolbar>
     </>
   )

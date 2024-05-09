@@ -12,7 +12,7 @@ interface PageProps {
   key: string
   component: PageItem
 }
-const AppRender: React.FC<AppProps> = ({ apps }) => {
+export const AppRender: React.FC<AppProps> = ({ apps }) => {
   const { currentProject } = useProjectSwitch()
   const _apps: PageProps[] = apps.map(_app => {
     return {
@@ -38,5 +38,3 @@ const AppRender: React.FC<AppProps> = ({ apps }) => {
     </>
   )
 }
-
-export default AppRender

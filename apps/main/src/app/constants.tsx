@@ -1,7 +1,19 @@
+export const GRADIENTS = [
+  {
+    icon: 'flat-color-icons:folder',
+    name: 'Blog',
+    value: 'Blog'
+  },
+  {
+    icon: 'vscode-icons:file-type-vscode',
+    name: 'Editor',
+    value: 'Editor'
+  }
+]
 import MarcoContainer from '~/marco-container'
 const Editor = () => <MarcoContainer src='https://rick-chou.github.io/repl/' />
 const Blog = () => <MarcoContainer src='https://juejin.cn/' />
-export const appList = [
+export const APPLIST = [
   {
     key: 'Blog',
     component: Blog
