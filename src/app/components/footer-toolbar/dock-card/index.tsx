@@ -1,7 +1,5 @@
 import * as React from 'react'
 import { animated, useSpringValue } from '@react-spring/web'
-
-import styles from './styles.module.scss'
 import { useProjectSwitch } from '@/hooks/useProjectSwitch'
 interface GradIent {
   icon: string
@@ -76,10 +74,19 @@ export const DockCard = ({ children, gradIent }: DockCardProps) => {
   )
 
   return (
-    <div className={styles['dock-card-container']}>
+    <div className='flex-col items-center gap-1'>
       <animated.button
         ref={cardRef}
-        className={styles['dock-card']}
+        className='
+          rounded-1 
+          filter-saturate-90 
+          filter-brightness-90 
+          cursor-pointer 
+          p-0 
+          m-0 
+          hover:filter-brightness-112 
+          hover:filter-saturate-100
+          transition-duration-200'
         onClick={handleClick}
         style={{
           width: size,

@@ -1,11 +1,11 @@
 export const GRADIENTS = [
   {
-    icon: 'logos:blogger',
+    icon: 'flat-color-icons:folder',
     name: 'Blog',
     value: 'Blog'
   },
   {
-    icon: 'flat-color-icons:folder',
+    icon: 'vscode-icons:file-type-vscode',
     name: 'Editor',
     value: 'Editor'
   }

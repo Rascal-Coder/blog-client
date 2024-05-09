@@ -2,11 +2,15 @@
  * loading 占位
  * 解决首次加载时白屏的问题
  */
-; (function () {
-	const _root = document.querySelector('#root')
-	if (_root && _root.innerHTML === '') {
-		_root.innerHTML = `
+;(function () {
+  const _root = document.querySelector('#root')
+  if (_root && _root.innerHTML === '') {
+    _root.innerHTML = `
 		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
 			body {
 				height: 100vh;
 				display: flex;
@@ -88,5 +92,5 @@
 			</div>
 		</div>
     `
-	}
+  }
 })()

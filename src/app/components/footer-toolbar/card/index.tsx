@@ -1,41 +1,27 @@
 import SvgIcon from '~/svg-icon'
-import styles from './styles.module.scss'
-// import * as Tooltip from '@radix-ui/react-tooltip'
 import RaTooltip from '~/tooltip'
-
+import classnames from 'classnames'
+import { useProjectSwitch } from '@/hooks/useProjectSwitch'
 interface CardProps {
   icon: string
   name: string
+  value: string
 }
 
-export const Card = ({ icon, name }: CardProps) => {
+export const Card: React.FC<CardProps> = ({ icon, name, value }) => {
+  const { currentProject } = useProjectSwitch()
+  const dockClass = classnames('flex-col-center! hidden w-full h-full relative z-0 rounded-1', {
+    'bg-[#f5f5f5]': currentProject === value
+  })
   return (
     <RaTooltip content={name}>
-      <div className={styles.card}>
+      <div className={dockClass}>
         {icon.includes('local-icon') ? (
-          <SvgIcon localIcon={icon.split(' ')[1]} width='30px' height='30px'></SvgIcon>
+          <SvgIcon localIcon={icon.split(' ')[1]} width='25px' height='25px'></SvgIcon>
         ) : (
-          <SvgIcon icon={icon} width='30px' height='30px'></SvgIcon>
+          <SvgIcon icon={icon} width='25px' height='25px'></SvgIcon>
         )}
       </div>
     </RaTooltip>
-    // <Tooltip.Provider>
-    //   <Tooltip.Root>
-    //     <Tooltip.Trigger asChild>
-    //       <div className={styles.card}>
-    //         {icon.includes('local-icon') ? (
-    //           <SvgIcon localIcon={icon.split(' ')[1]} width='30px' height='30px'></SvgIcon>
-    //         ) : (
-    //           <SvgIcon icon={icon} width='30px' height='30px'></SvgIcon>
-    //         )}
-    //       </div>
-    //     </Tooltip.Trigger>
-    //     <Tooltip.Portal>
-    //       <Tooltip.Content className='TooltipContent' sideOffset={5}>
-    //         {name}
-    //       </Tooltip.Content>
-    //     </Tooltip.Portal>
-    //   </Tooltip.Root>
-    // </Tooltip.Provider>
   )
 }

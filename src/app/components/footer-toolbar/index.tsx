@@ -17,7 +17,7 @@ const SideToolbar: React.FC<Props> = ({ gradIents }) => {
         <Dock>
           {gradIents.map(gradIent => (
             <DockCard key={gradIent.value} gradIent={gradIent}>
-              <Card icon={gradIent.icon} name={gradIent.name} />
+              <Card icon={gradIent.icon} value={gradIent.value} name={gradIent.name} />
             </DockCard>
           ))}
         </Dock>
