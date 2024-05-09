@@ -20,18 +20,25 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "baseUrl": ".",
+    "types": [
+      "vite/client",
+      "node",
+      "unplugin-icons/types/react",
+      "vite-plugin-svg-icons/client"
+    ],
     "paths": {
-      "@rascal/rules-config": [
-        "./packages/rules-config"
+      "@/*": [
+        "./src/*"
       ],
-      "@rascal/uno-preset": [
-        "./packages/uno-preset"
-      ],
-      "@rascal/utils": [
-        "./packages/utils"
-      ],
+      "~/*": [
+        "./src/components/*"
+      ]
     }
   },
+  "include": [
+    "./**/*.ts",
+    "./**/*.tsx"
+  ],
   "exclude": [
     "node_modules",
     "dist"

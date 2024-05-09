@@ -1,4 +1,4 @@
-<h1 align="center"> 🌟 Rascal-Blog</h1>
+<h1 align="center"> 🌟 Rascal-Website</h1>
 
 <p align="center">
     <img src="https://rascal-1.oss-cn-beijing.aliyuncs.com/blog-imgs/js.webp" width="80" />

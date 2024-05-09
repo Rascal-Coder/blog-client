@@ -11,7 +11,7 @@ interface Props {
 }
 const SideToolbar: React.FC<Props> = ({ gradIents }) => {
   return (
-    <div className='fixed left-0 bottom-0 w-screen  bg-[#efefef] py-2 px-3 box-border '>
+    <div className='fixed left-0 bottom-0 w-screen  h-[50px] bg-[#efefef] py-2 px-3 box-border '>
       <div className='relative flex-center'>
         <div>weather</div>
         <Dock>

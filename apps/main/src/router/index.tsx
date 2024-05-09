@@ -7,7 +7,6 @@ export const routes: RouteObject[] = [
   {
     path: import.meta.env.BASE_URL,
     element: <App />,
-    children: [],
     errorElement: <ErrorPage />
   },
   {
