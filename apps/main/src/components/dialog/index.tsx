@@ -1,33 +1,74 @@
 import * as Dialog from '@radix-ui/react-dialog'
 import { styled, keyframes } from '@stitches/react'
-import { violet, blackA, mauve, green } from '@radix-ui/colors'
-import { type PropsWithChildren } from 'react'
-interface Props extends PropsWithChildren {
-  trigger: React.ReactNode
+import { blackA, mauve } from '@radix-ui/colors'
+import Flex from '~/flex'
+import SvgIcon from '~/svg-icon'
+import { Button, IconButton } from '~/button'
+import { type Props } from './types'
+const defaultAction = {
+  cancelText: '取消',
+  confirmText: '确定'
 }
-const RaDialog: React.FC<Props> = ({ children, trigger }) => (
-  <Dialog.Root>
-    <Dialog.Trigger asChild>
-      {trigger}
-    </Dialog.Trigger>
-    <Dialog.Portal>
-      <DialogOverlay />
-      <DialogContent>
-        <DialogTitle>Edit profile</DialogTitle>
-        <DialogDescription>Make changes to your profile here. Click save when you're done.</DialogDescription>
-        {children}
-        <Flex css={{ marginTop: 25, justifyContent: 'flex-end' }}>
-          <Dialog.Close asChild>
-            <Button variant='green'>Save changes</Button>
-          </Dialog.Close>
-        </Flex>
-        <Dialog.Close asChild>
-          <IconButton aria-label='Close'>x</IconButton>
-        </Dialog.Close>
-      </DialogContent>
-    </Dialog.Portal>
-  </Dialog.Root>
-)
+const defaultTitle = 'Dialog Title'
+const defaultDescription = 'Dialog Description'
+const RaDialog: React.FC<Props> = ({
+  showClose = true,
+  showFooter = true,
+  showDescription = true,
+  showTitle = true,
+  description = defaultDescription,
+  title = defaultTitle,
+  action = defaultAction,
+  dialogChildren,
+  open,
+  setOpen
+}) => {
+  const { cancelText, confirmText } = action
+  const createTitle = () => showTitle && <DialogTitle>{title}</DialogTitle>
+
+  const createDescription = () => showDescription && <DialogDescription>{description}</DialogDescription>
+
+  const createFooter = () => (
+    <>
+      <Dialog.Close asChild>
+        <Button>{cancelText}</Button>
+      </Dialog.Close>
+      <Dialog.Close asChild>
+        <Button css={{ marginLeft: 25 }}>{confirmText}</Button>
+      </Dialog.Close>
+    </>
+  )
+  return (
+    <Dialog.Root
+      open={open}
+      onOpenChange={() => {
+        setOpen(!open)
+      }}
+    >
+      <Dialog.Trigger asChild>{dialogChildren.trigger}</Dialog.Trigger>
+      <Dialog.Portal>
+        <DialogOverlay />
+        <DialogContent>
+          {createTitle()}
+          {createDescription()}
+          {dialogChildren.body}
+          {showFooter && (
+            <Flex css={{ marginTop: 25, justifyContent: 'flex-end' }}>
+              {dialogChildren.footer ? dialogChildren.footer : createFooter()}
+            </Flex>
+          )}
+          {showClose && (
+            <Dialog.Close asChild>
+              <IconButton aria-label='Close'>
+                <SvgIcon icon='line-md:close-small'></SvgIcon>
+              </IconButton>
+            </Dialog.Close>
+          )}
+        </DialogContent>
+      </Dialog.Portal>
+    </Dialog.Root>
+  )
+}
 
 const overlayShow = keyframes({
   '0%': { opacity: 0 },
@@ -75,59 +116,5 @@ const DialogDescription = styled(Dialog.Description, {
   fontSize: 15,
   lineHeight: 1.5
 })
-
-const Flex = styled('div', { display: 'flex' })
-
-// const Button = styled('button', {
-//   all: 'unset',
-//   display: 'inline-flex',
-//   alignItems: 'center',
-//   justifyContent: 'center',
-//   borderRadius: 4,
-//   padding: '0 15px',
-//   fontSize: 15,
-//   lineHeight: 1,
-//   fontWeight: 500,
-//   height: 35,
-
-//   variants: {
-//     variant: {
-//       violet: {
-//         backgroundColor: 'white',
-//         color: violet.violet11,
-//         boxShadow: `0 2px 10px ${blackA.blackA4}`,
-//         '&:hover': { backgroundColor: mauve.mauve3 },
-//         '&:focus': { boxShadow: `0 0 0 2px black` }
-//       },
-//       green: {
-//         backgroundColor: green.green4,
-//         color: green.green11,
-//         '&:hover': { backgroundColor: green.green5 },
-//         '&:focus': { boxShadow: `0 0 0 2px ${green.green7}` }
-//       }
-//     }
-//   },
-//   defaultVariants: {
-//     variant: 'violet'
-//   }
-// })
-
-// const IconButton = styled('button', {
-//   all: 'unset',
-//   fontFamily: 'inherit',
-//   borderRadius: '100%',
-//   height: 25,
-//   width: 25,
-//   display: 'inline-flex',
-//   alignItems: 'center',
-//   justifyContent: 'center',
-//   color: violet.violet11,
-//   position: 'absolute',
-//   top: 10,
-//   right: 10,
-
-//   '&:hover': { backgroundColor: violet.violet4 },
-//   '&:focus': { boxShadow: `0 0 0 2px ${violet.violet7}` }
-// })
 
 export default RaDialog

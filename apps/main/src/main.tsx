@@ -6,6 +6,7 @@ import { persistor, store } from './store'
 import { RouterProvider } from 'react-router-dom'
 import { router } from './router'
 import './plugins/assets'
+
 function setupVitePlugins() {
   setupIconifyOffline()
 }

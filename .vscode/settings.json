@@ -12,7 +12,7 @@
     "source.fixAll.eslint": "explicit",
     "source.fixAll.stylelint": "explicit"
   },
-  "workbench.iconTheme": "material-icon-theme",
+  "workbench.iconTheme": "vs-seti",
   "workbench.colorTheme": "One Dark Pro",
   "material-icon-theme.activeIconPack": "react"
 }
