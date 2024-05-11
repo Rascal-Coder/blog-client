@@ -5,12 +5,14 @@ import Flex from '~/flex'
 import SvgIcon from '~/svg-icon'
 import { Button, IconButton } from '~/button'
 import { type Props } from './types'
+import { useState } from 'react'
 const defaultAction = {
   cancelText: '取消',
   confirmText: '确定'
 }
 const defaultTitle = 'Dialog Title'
 const defaultDescription = 'Dialog Description'
+
 const RaDialog: React.FC<Props> = ({
   showClose = true,
   showFooter = true,
@@ -21,7 +23,8 @@ const RaDialog: React.FC<Props> = ({
   action = defaultAction,
   dialogChildren,
   open,
-  setOpen
+  setOpen,
+  css
 }) => {
   const { cancelText, confirmText } = action
   const createTitle = () => showTitle && <DialogTitle>{title}</DialogTitle>
@@ -48,7 +51,7 @@ const RaDialog: React.FC<Props> = ({
       <Dialog.Trigger asChild>{dialogChildren.trigger}</Dialog.Trigger>
       <Dialog.Portal>
         <DialogOverlay />
-        <DialogContent>
+        <DialogContent css={css}>
           {createTitle()}
           {createDescription()}
           {dialogChildren.body}
@@ -94,10 +97,10 @@ const DialogContent = styled(Dialog.Content, {
   position: 'fixed',
   top: '50%',
   left: '50%',
-  transform: 'translate(-50%, -50%)',
   width: '90vw',
   maxWidth: '650px',
   maxHeight: '85vh',
+  transform: 'translate(-50%, -50%)',
   padding: 25,
   animation: `${contentShow} 150ms cubic-bezier(0.16, 1, 0.3, 1)`,
   '&:focus': { outline: 'none' }

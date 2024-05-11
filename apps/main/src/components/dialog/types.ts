@@ -1,4 +1,12 @@
 import { type Dispatch, type SetStateAction } from 'react'
+import { type CSS } from '@stitches/react'
+interface Styles {
+  top: string
+  left: string
+  width: string
+  maxWidth: string
+  maxHeight: string
+}
 export interface Props {
   dialogChildren: {
     body?: React.ReactNode
@@ -15,6 +23,7 @@ export interface Props {
   title?: string
   setOpen: Dispatch<SetStateAction<boolean>>
   handleClose?: () => void
+  css?: CSS
 }
 interface ActionProps {
   cancelText: string

@@ -78,7 +78,10 @@ export const Weather = () => {
     setOpen: setDialogOpen,
     showFooter: false,
     title: 'Weather io',
-    showDescription: false
+    showDescription: false,
+    css: {
+      maxWidth: '1200px !important'
+    }
   }
   return <Dialog {...props}></Dialog>
 }
