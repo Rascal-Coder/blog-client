@@ -1,6 +1,6 @@
 import { useProjectSwitch } from '@/hooks/useProjectSwitch'
 import { useTransition, animated, type AnimatedProps } from '@react-spring/web'
-import { type CSSProperties } from 'react'
+import { useEffect, type CSSProperties } from 'react'
 interface AppProps {
   apps: Array<{
     key: string
@@ -30,6 +30,7 @@ export const AppRender: React.FC<AppProps> = ({ apps }) => {
     enter: { transform: 'translate3d(0%,0,0)' },
     leave: { transform: 'translate3d(-100%,0,0)' }
   })
+
   return (
     <>
       {transitions(style => {
