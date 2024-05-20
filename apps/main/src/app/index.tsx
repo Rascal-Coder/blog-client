@@ -1,6 +1,6 @@
 import { FooterToolbar, AppRender } from './components'
 import { GRADIENTS, APPLIST } from './constants'
-import { globalCss } from '@stitches/react'
+// import { globalCss } from '@stitches/react'
 // const globalStyles = globalCss({
 //   bottun: { background: 'none' }
 // })

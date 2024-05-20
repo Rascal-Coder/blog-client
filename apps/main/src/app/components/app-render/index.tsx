@@ -1,6 +1,6 @@
 import { useProjectSwitch } from '@/hooks/useProjectSwitch'
 import { useTransition, animated, type AnimatedProps } from '@react-spring/web'
-import { useEffect, type CSSProperties } from 'react'
+import { type CSSProperties } from 'react'
 interface AppProps {
   apps: Array<{
     key: string

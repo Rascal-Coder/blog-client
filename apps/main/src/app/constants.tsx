@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import MarcoContainer from '~/marco-container'
+import Music from '~/music'
 export const GRADIENTS = [
   {
     icon: 'flat-color-icons:folder',
@@ -10,6 +11,11 @@ export const GRADIENTS = [
     icon: 'vscode-icons:file-type-vscode',
     name: 'Editor',
     value: 'Editor'
+  },
+  {
+    icon: 'emojione-v1:musical-notes',
+    name: 'Music',
+    value: 'Music'
   },
   {
     icon: 'emojione:sun-behind-cloud',
@@ -57,6 +63,10 @@ export const APPLIST = [
   {
     key: 'Editor',
     component: Editor
+  },
+  {
+    key: 'Music',
+    component: Music
   },
   {
     key: 'Weather',

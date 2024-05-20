@@ -4,7 +4,12 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev:main": "cd ./apps/main && pnpm dev"
+    "dev:main": "cd apps/main && pnpm dev",
+    "dev:editor": "cd apps/editor && pnpm dev",
+    "dev": "npm-run-all dev:*",
+    "bootstrap": "pnpm && npm-run-all --serial install:*",
+    "install:apps-main": "cd apps/main && pnpm",
+    "install:apps-editor": "cd apps/editor && pnpm"
   },
   "dependencies": {
     "npm-run-all": "^4.1.5",
