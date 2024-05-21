@@ -24,15 +24,15 @@
     "typescript": "^5.3.2"
   },
   "prettier": {
-    "tabWidth": 2,
+    "printWidth": 120,
     "useTabs": false,
+    "tabWidth": 2,
+    "semi": false,
     "singleQuote": true,
-    "semi": true,
-    "bracketSpacing": true,
+    "jsxSingleQuote": true,
     "arrowParens": "avoid",
-    "trailingComma": "all",
-    "bracketSameLine": true,
-    "printWidth": 80,
-    "endOfLine": "lf"
+    "bracketSpacing": true,
+    "trailingComma": "none",
+    "endOfLine": "auto"
   }
 }

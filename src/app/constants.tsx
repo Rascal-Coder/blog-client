@@ -35,6 +35,7 @@ const Weather = () => {
     const getLocation = () => {
       window.navigator.geolocation.getCurrentPosition(
         res => {
+          console.log('🚀 ~ getLocation ~ res:', res)
           const { latitude, longitude } = res.coords
           setLatitude(latitude)
           setLongitude(longitude)
@@ -47,6 +48,7 @@ const Weather = () => {
 
     getLocation()
   }, [])
+
   return (
     <MarcoContainer
       id='weather'
